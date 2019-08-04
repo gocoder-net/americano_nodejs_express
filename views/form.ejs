@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>기본 예제 테스트</title>
+</head>
+<body>
+<h1>이름</h1>
+<p> <%= name %></p>
+<h1>블로그</h1>
+<p> <%= blog %></p>
+<h1>홈페이지</h1>
+<p> <%= homepage %></p>
+
+<form id="Form" action="/form" method="post">
+    <table width="400">
+        <tr>
+            <th>이름</th>
+            <td><input type="text" name="name" id="name" size="10" maxLength="10"></td>
+        </tr>
+        <tr>
+            <th>블로그</th>
+            <td><input type="text" name="blog" id="blog" size="20" maxLength="20"></td>
+        </tr>
+        <tr>
+            <th>홈페이지</th>
+            <td><input type="text" name="homepage" id="homepage" size="20" maxLength="20"></td>
+        </tr>
+        <tr>
+            <th>전송</th>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+

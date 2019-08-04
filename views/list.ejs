@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<a href="/board/write">글쓰기</a>
+<table border="1">
+    <tr>
+        <td>번호</td>
+        <td>작성자</td>
+        <td>제목</td>
+        <td>조회수</td>
+        <td>수정일</td>
+        <td>등록일</td>
+    </tr>
+    <%
+    for(var i=0; i<rows.length; i++)
+    {
+        var data = rows[i];
+    %>
+    <tr>
+        <td><%=data.idx%></td>
+        <td><%=data.name%></td>
+        <td><a href="/board/read/<%=data.idx%>"><%=data.title%></a></td>
+        <td><%=data.hit%></td>
+        <td><%=data.modidate%></td>
+        <td><%=data.regdate%></td>
+    </tr>
+    <%}%>
+</table>
+
+</body>
+</html>
